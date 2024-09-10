@@ -1,2 +1,2 @@
-# bubble-pop
-bubble wrap popping
+# bubblepop
+A website to pop bubble wraps
