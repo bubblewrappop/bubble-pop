@@ -33,18 +33,57 @@ body {
 }
 
 .bubble.popped {
-    background-color: #f8f8f8;
-    transform: scale(0.5);
-    animation: popAnimation 0.3s forwards;
+    animation: popAnimation 0.4s forwards;
 }
 
 @keyframes popAnimation {
-    0% { transform: scale(1); }
-    100% { transform: scale(0.5); opacity: 0; }
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
 }
 
 #message {
     margin-top: 20px;
     font-size: 1.5em;
     color: #333333;
+}
+
+
+.big-bubble {
+    width: 100px;
+    height: 100px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    margin: 20px auto;
+}
+
+.big-bubble.popped {
+    animation: bigPopAnimation 0.6s forwards;
+}
+
+@keyframes bigPopAnimation {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
 }
